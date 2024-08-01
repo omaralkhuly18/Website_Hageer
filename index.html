@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Daily Log</title>
+    <link rel="stylesheet" href="layouts/css/styles.css">
+    <link rel="stylesheet" href="layouts/css/bootstrap.min.css">
+</head>
+
+<body>
+    <section class="section_values">
+        <div class="container">
+            <form action="insert.php" method="POST">
+                <div class="table-container">
+                    <table id="dataTable">
+                        <thead>
+                            <tr>
+                                <th rowspan="2" class="diagonal-header">
+                                    <div class="category2"> العبادات </div>
+                                    <div class="border_solid"></div>
+                                    <div class="category1">الأيام</div>
+                                </th>
+                                <td>الصلاة في وقتها</td>
+                                <td>السنن</td>
+                                <td>صلاة الفجر</td>
+                                <td>ختم الصلاة</td>
+                                <td>أذكار الصباح والمساء</td>
+                                <td>صلاة الضحى</td>
+                                <td>قيام الليل</td>
+                                <td>الإستغفار</td>
+                                <td>الذكر</td>
+                                <td>قراءة القرآن الكريم</td>
+                                <td>الدعاء</td>
+                                <td>أذكار النوم</td>
+                                <td>سورة تبارك</td>
+                                <td>سورة الكهف</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <script>
+                                const days = [
+                                    "السبت",
+                                    "الأحد",
+                                    "الإثنين",
+                                    "الثلاثاء",
+                                    "الأربعاء",
+                                    "الخميس",
+                                    "الجمعة"
+                                ];
+        
+                                const prayers = [
+                                    "الصلاة في وقتها",
+                                    "السنن",
+                                    "صلاة الفجر",
+                                    "ختم الصلاة",
+                                    "أذكار الصباح والمساء",
+                                    "صلاة الضحى",
+                                    "قيام الليل",
+                                    "الإستغفار",
+                                    "الذكر",
+                                    "قراءة القرآن الكريم",
+                                    "الدعاء",
+                                    "أذكار النوم",
+                                    "سورة تبارك",
+                                    "سورة الكهف"
+                                ];
+        
+                                days.forEach((day, dayIndex) => {
+                                    document.write('<tr>');
+                                    document.write(`<th>${day}</th>`);
+                                    prayers.forEach((prayer, prayerIndex) => {
+                                        document.write(`
+                                            <td class="select_choose">
+                                                <select name="entry[${dayIndex}][${prayerIndex}]" class="form-select status_select" aria-label="Default select example">
+                                                    <option selected value="none">الاختيار</option>
+                                                    <option value="correct">تم</option>
+                                                    <option value="mistake">لم يتم</option>
+                                                </select>
+                                                <span class="icon"></span>
+                                            </td>
+                                        `);
+                                    });
+                                    document.write('</tr>');
+                                });
+                            </script>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="button_submit" type="submit">Submit</button>
+            </form>
+        </div>
+    </section>
+
+    <div id="notification"></div>
+
+    <script src="layouts/js/script.js"></script>
+    <script src="layouts/js/bootstrap.min.js"></script>
+</body>
+
+</html>
