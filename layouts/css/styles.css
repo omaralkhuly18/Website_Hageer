@@ -117,41 +117,42 @@ td {
         overflow-y: scroll;
         width: 100%;
     }
+}
 
-    .error {
-        border: 1px solid red;
-    }
+.error {
+    border: 1px solid red;
+}
 
-    #notification {
-        display: none;
-        width: 100%;
-        height: 50px;
-        background-color: white;
-        position: absolute;
-        top: 0;
-        margin: 1% 0;
-        align-items: center;
-        justify-content: center;
-        box-shadow: white 0 0 8px 4px;
-        color: red;
-        text-align: center;
-    }
+#notification {
+    display: none;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    margin: 1% 0;
+    align-items: center;
+    justify-content: center;
+    box-shadow: white 0 0 8px 4px;
+    color: red;
+    text-align: center;
+}
 
-    .button_submit {
-        width: 100%;
-        height: 50px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #000000;
-        color: #fff;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        margin-top: 2%;
-        transition: 0.6s;
-    }
+.button_submit {
+    width: 100%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 2%;
+    transition: 0.6s;
+}
 
-    .button_submit:hover {
-        background-color: #00000046;
-    }
+.button_submit:hover {
+    background-color: #00000046;
+}
